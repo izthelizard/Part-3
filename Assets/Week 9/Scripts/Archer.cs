@@ -7,6 +7,11 @@ public class Archer : Villager
     public GameObject arrowPrefab;
     public Transform spawnPoint;
 
+    public override string ToString()
+    {
+        return "I'm Graha the Archer!";
+    }
+
     protected override void Attack()
     {
         destination = transform.position;
