@@ -31,10 +31,15 @@ public class player : MonoBehaviour
     {
 
         movement = dest - (Vector2)transform.position;
-        if (movement.magnitude < 0.1 )
+        if (movement.magnitude < 0.1)
         {
             movement = Vector2.zero;
         }
         rb.MovePosition(rb.position + movement.normalized * speed * Time.deltaTime);
+    }
+
+    private void OnMouseDown()
+    {
+        animator.SetTrigger("wateringcan");
     }
 }
