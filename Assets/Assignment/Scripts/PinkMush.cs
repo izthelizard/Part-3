@@ -17,14 +17,15 @@ public class PinkMush : player
         //hydration starts at max hydration
         hydration = maxHydration;
         //if they hydration is at max, then the coroutine starts
-        if (hydration == maxHydration)
-        {
-            StartCoroutine(PlantLife());
-        }
+        
 
     }
     private void Update()
     {
+        if (hydration == maxHydration)
+        {
+            StartCoroutine(PlantLife());
+        }
         //if hydration is at 0 then the dehydration animation plays for the mushroom
         if (hydration == 0)
         {

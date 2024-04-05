@@ -16,15 +16,17 @@ public class PurMush : player
         animator = GetComponent<Animator>();
         //hydration starts at max hydration
         hydration = maxHydration;
+        
+        
+
+    }
+    private void Update()
+    {
         //if they hydration is at max, then the coroutine starts
         if (hydration == maxHydration)
         {
             StartCoroutine(PlantLife());
         }
-
-    }
-    private void Update()
-    {
         //if hydration is at 0 then the dehydration animation plays for the mushroom
         if (hydration == 0)
         {
